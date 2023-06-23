@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class EquipmentType extends Model
 {
     use HasFactory;
+
+    public function equipment()
+    {
+        return $this->hasMany(Equipment::class);
+    }
 }

@@ -20,8 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResources([
-    'equipment' => EquipmentController::class,
+Route::apiResource('equipment', EquipmentController::class);
 
-    'equipment-type' => EquipmentTypeController::class,
-]);
+Route::get('equipment-type', [EquipmentTypeController::class, 'index']);

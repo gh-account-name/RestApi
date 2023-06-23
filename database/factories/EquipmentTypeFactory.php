@@ -18,7 +18,7 @@ class EquipmentTypeFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
-            'mask' => $this->faker->regexify('[NAaXZ]{10}')
+            'mask' => $this->faker->unique()->regexify('[NAaXZ]{10}')
         ];
     }
 }
